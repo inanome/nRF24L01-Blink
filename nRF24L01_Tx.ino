@@ -17,7 +17,7 @@ void setup() {
   radio.begin();
   delay(2);
   radio.setChannel(9);                 //канал (0-127)
-  radio.setDataRate(RF24_250KBPS);       //скорость, RF24_250KBPS (на nRF24L01 "без +" не работает), RF24_1MBPS, RF24_2MBPS
+  radio.setDataRate(RF24_250KBPS);     //скорость, RF24_250KBPS (на nRF24L01 "без +" не работает), RF24_1MBPS, RF24_2MBPS
                                        //меньше скорость, выше чувствительность приемника
   radio.setPALevel(RF24_PA_HIGH);      //мощность передатчика, RF24_PA_MIN=-18dBm, RF24_PA_LOW=-12dBm,
   radio.openWritingPipe(pipe);         //открываем трубу на передачу
